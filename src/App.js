@@ -11,7 +11,7 @@ function App() {
   const buttonEvent = () => {
     axios
       .post(
-        "https://web-chartinghelperfrontend-sop272gld9krimc.gksl2.cloudtype.app/:3001/Depth1/test"
+        "https://port-0-chartinghelperbackend-sop272gld9krimc.gksl2.cloudtype.app:3001/Depth1/test"
       )
       .then((res) => {
         console.log("res : ", res);
