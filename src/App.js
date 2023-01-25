@@ -1,32 +1,15 @@
 import React, { useEffect } from "react";
-import axios from "axios";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Selection from "./Selection";
 
 function App() {
-  // const buttonEvent = () => {
-  //   axios.post("http://localhost:3001/Depth1/test").then((res) => {
-  //     console.log("res : ", res);
-  //   });
-  // };
-
-  const buttonEvent = () => {
-    axios
-      .post(
-        "https://port-0-chartinghelperbackend-sop272gld9krimc.gksl2.cloudtype.app/Depth1/test"
-        // "http://localhost:3001/Depth1/test"
-      )
-      .then((res) => {
-        console.log("res : ", res);
-      });
-  };
-
   return (
-    <>
-      <h2>First Page</h2>
-      <button onClick={buttonEvent}>Click!</button>
-      <select>test1</select>
-      <select>test2</select>
-      <select>test3</select>
-    </>
+    <Router>
+      <Routes>
+        {/* <Route path="/" element={<Selection />}></Route> */}
+        <Route path="/" element={<Selection />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
